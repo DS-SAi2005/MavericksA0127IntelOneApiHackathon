@@ -1,0 +1,2 @@
+# MavericksA0127IntelOneApiHackathon
+ Candlestick Pattern Scanner is an AI-powered platform designed to assist traders and investors in identifying critical stock market trends using real-time data. This tool leverages advanced machine learning algorithms to detect significant candlestick patterns such as Doji, Hammer, and Engulfing, providing users with actionable insights and timely alerts to make informed trading decisions.
