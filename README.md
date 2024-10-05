@@ -25,31 +25,32 @@ We have used Intel's Scikit-Learn wrapper scikit-learn-intelex for importing yfi
 
 #![Screenshot 2024-10-05 082044](https://github.com/user-attachments/assets/67a4f9e7-90ee-4317-8067-1f6fa3cdd159)
 
-We have used TensorFlow to import ARIMA for stock prediction.
+We have used # TensorFlow to import # ARIMA for stock prediction.
 
 ![Screenshot 2024-10-05 095833](https://github.com/user-attachments/assets/6ab691a1-6a94-4f46-ab23-13d2d2577c51)
 
-import Llama 3.1-70B versatile using langchain for generation of report
+import #cLlama # 3.1-70B versatile using langchain for generation of report
 
 ![Screenshot 2024-10-05 100032](https://github.com/user-attachments/assets/1a342bf9-04a0-454e-a13b-366c1a7c9765)
 
-#Live Demo:
+# Live Demo:
 
-![Uploading Screenshot 2024-10-05 102333.png…]()
+![Screenshot 2024-10-05 102333](https://github.com/user-attachments/assets/bb9b00c4-ea8f-437e-bfe4-3028ff706f39)
+
 ![Screenshot 2024-10-05 102501](https://github.com/user-attachments/assets/d23e96a3-a677-45b6-a21a-1f4e7a8288cd)
 
 
-#Future Plans:
+# Future Plans:
 
 1) Let the model keep tracking the stock and notify the user when their request pattern is predicted to appear.
 2) Let the users track multiple stocks at once.
 3) Features related to lower support and resistance lines.
 4) Add more candle stick pattens and also Introduce Multiple candle stick patterns.
 
-#Challenges Faced
+# Challenges Faced
 Major News (good, bad) can impact the market heavily, making it difficult to predict values in such situations.
 
-#References:
+# References:
 https://indjst.org/articles/predicting-a-small-cap-company-stock-price-using-python-with-best-accuracy-rate-how-the-data-science-working-for-predictions-and-accuracy-rate
 
 
