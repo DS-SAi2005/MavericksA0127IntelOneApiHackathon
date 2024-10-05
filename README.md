@@ -1,6 +1,6 @@
 # MavericksA0127IntelOneApiHackathon
 
-#UPCOMING CANDLE STICK PREDICTOR FOR STOCKS
+# UPCOMING CANDLE STICK PREDICTOR FOR STOCKS
 
 In intraday trading, traders heavily rely on technical analysis for making trade decisions. Candlestick graphs are an elegant way which help traders quickly understand the past movement of
 a stock’s price. They also help in understanding the market sentiment
@@ -9,7 +9,7 @@ a stock’s price. They also help in understanding the market sentiment
 
 Predicting the next candle stick in advance can help one manage risk and make wise decisions.
 
-#About the project:
+# About the project:
 
 Stock prediction may seem like simple task at first glace but to its challenging to do it in real time quickly and accurately which we have implemented with an accuracy of 87-94%. 
 In the project, we have focused on S&P500, but the model works for NSE and other markets too.
@@ -18,14 +18,8 @@ The users have to add their desired stock and select the candle stick pattern wh
 The user can request for a comprehensive report of the stock.
 
 ![Screenshot 2024-10-05 081925](https://github.com/user-attachments/assets/4a178b2b-64cb-452c-8b27-1589255624fa)
-Implementation:
 
-We have used Intel's Scikit-Learn wrapper scikit-learn-intelex for importing yfinance which is used for getting real time stock data.
-
-![Screenshot 2024-10-05 081939](https://github.com/user-attachments/assets/2b09e56e-38e3-4053-87b9-91c44b883a5a)
-#CandleStick Patterns
-![Screenshot 2024-10-05 082014](https://github.com/user-attachments/assets/ecd0ba97-8e73-403a-b7ae-34052a574d6f)
-#Implementation:
+# Implementation:
 
 We have used Intel's Scikit-Learn wrapper scikit-learn-intelex for importing yfinance which is used for getting real time stock data.
 
