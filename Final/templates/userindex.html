@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Stock Price Prediction</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .card-custom {
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-select, .form-control {
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+
+        .result-card {
+            margin-top: 20px;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background-color: #e9ecef;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Stock Price Prediction</h1>
+        
+        <div class="card-custom">
+            <form action="/predict" method="POST" id="selectionForm">
+                <div class="mb-3">
+                    <label for="stockSelect" class="form-label">Select Stock</label>
+                    <select class="form-select" id="stockSelect" name="stockSelect" required>
+                        <option value="" disabled selected>Select a stock...</option>
+                        <option value="AAPL">Apple (AAPL)</option>
+                        <option value="MSFT">Microsoft (MSFT)</option>
+                        <option value="AMZN">Amazon (AMZN)</option>
+                        <option value="GOOGL">Google (GOOGL)</option>
+                        <option value="TSLA">Tesla (TSLA)</option>
+                        <option value="FB">Meta Platforms (FB)</option>
+                        <option value="BRK.B">Berkshire Hathaway (BRK.B)</option>
+                        <option value="JNJ">Johnson & Johnson (JNJ)</option>
+                        <option value="JPM">JPMorgan Chase (JPM)</option>
+                        <option value="V">Visa (V)</option>
+                        <option value="PG">Procter & Gamble (PG)</option>
+                        <option value="DIS">Walt Disney (DIS)</option>
+                        <option value="NFLX">Netflix (NFLX)</option>
+                        <option value="NVDA">NVIDIA (NVDA)</option>
+                        <option value="VZ">Verizon (VZ)</option>
+                        <option value="ADBE">Adobe (ADBE)</option>
+                        <option value="INTC">Intel (INTC)</option>
+                        <option value="CMCSA">Comcast (CMCSA)</option>
+                        <option value="XOM">ExxonMobil (XOM)</option>
+                        <option value="T">AT&T (T)</option>
+                        <option value="CSCO">Cisco Systems (CSCO)</option>
+                        <option value="PEP">PepsiCo (PEP)</option>
+                        <option value="NKE">Nike (NKE)</option>
+                        <option value="PYPL">PayPal (PYPL)</option>
+                        <option value="MRK">Merck (MRK)</option>
+                        <option value="AVGO">Broadcom (AVGO)</option>
+                        <option value="TXN">Texas Instruments (TXN)</option>
+                        <option value="AMGN">Amgen (AMGN)</option>
+                        <option value="MDLZ">Mondelez (MDLZ)</option>
+                        <option value="IBM">IBM (IBM)</option>
+                        <option value="HON">Honeywell (HON)</option>
+                        <option value="BA">Boeing (BA)</option>
+                        <option value="NOW">ServiceNow (NOW)</option>
+                        <option value="QCOM">Qualcomm (QCOM)</option>
+                        <option value="ISRG">Intuitive Surgical (ISRG)</option>
+                        <option value="SBUX">Starbucks (SBUX)</option>
+                        <option value="LMT">Lockheed Martin (LMT)</option>
+                        <option value="CAT">Caterpillar (CAT)</option>
+                        <option value="ATVI">Activision Blizzard (ATVI)</option>
+                        <option value="SYY">Sysco (SYY)</option>
+                        <option value="KMB">Kimberly-Clark (KMB)</option>
+                        <option value="FIS">FIS (FIS)</option>
+                        <option value="MDT">Medtronic (MDT)</option>
+                        <option value="AMAT">Applied Materials (AMAT)</option>
+                        <option value="SYK">Stryker Corporation (SYK)</option>
+                        <option value="BKNG">Booking Holdings (BKNG)</option>
+                        <option value="NEM">Newmont Corporation (NEM)</option>
+                        <option value="SLB">Schlumberger (SLB)</option>
+                        <option value="GILD">Gilead Sciences (GILD)</option>
+                        <option value="PNC">PNC Financial Services (PNC)</option>
+                        <option value="CARR">Carrier Global (CARR)</option>
+                        <option value="PXD">Pioneer Natural Resources (PXD)</option>
+                        <option value="CAG">Conagra Brands (CAG)</option>
+                        <option value="NDAQ">Nasdaq (NDAQ)</option>
+                        <option value="FTV">Fortive (FTV)</option>
+                        <option value="WAT">Waters Corporation (WAT)</option>
+                        <option value="MSI">Motorola Solutions (MSI)</option>
+                        <option value="NWL">Newell Brands (NWL)</option>
+                        <option value="DLR">Digital Realty (DLR)</option>
+                        <option value="DTE">DTE Energy (DTE)</option>
+                        <option value="KMX">CarMax (KMX)</option>
+                        <option value="GWW">W.W. Grainger (GWW)</option>
+                        <option value="XYL">Xylem (XYL)</option>
+                        <option value="CMS">CMS Energy (CMS)</option>
+                        <option value="AMCR">Amcor (AMCR)</option>
+                        <option value="HIG">The Hartford (HIG)</option>
+                        <option value="SHW">Sherwin-Williams (SHW)</option>
+                        <option value="HLT">Hilton Worldwide (HLT)</option>
+                        <option value="HRL">Hormel Foods (HRL)</option>
+                        <option value="WDC">Western Digital (WDC)</option>
+                        <option value="AJG">Arthur J. Gallagher & Co. (AJG)</option>
+                        <option value="RE">Everest Re Group (RE)</option>
+                        <option value="TAP">Molson Coors Beverage Company (TAP)</option>
+                        <option value="ALGN">Align Technology (ALGN)</option>
+                        <option value="DISCK">Discovery, Inc. (DISCK)</option>
+                        <option value="AVY">Avery Dennison (AVY)</option>
+                        <option value="CINF">Cincinnati Financial (CINF)</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="patternSelect" class="form-label">Select Candlestick Pattern</label>
+                    <select class="form-select" id="patternSelect" name="patternSelect" required>
+                        <option value="" disabled selected>Select a pattern...</option>
+                        <option value="Hammer">Hammer</option>
+                        <option value="Shooting Star">Shooting Star</option>
+                        <option value="Bullish Engulfing">Bullish Engulfing</option>
+                        <option value="Bearish Engulfing">Bearish Engulfing</option>
+                        <option value="Doji">Doji</option>
+                        <option value="Morning Star">Morning Star</option>
+                        <option value="Evening Star">Evening Star</option>
+                        <option value="Three White Soldiers">Three White Soldiers</option>
+                        <option value="Three Black Crows">Three Black Crows</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="generateReport" class="form-label">Generate Report?</label>
+                    <select class="form-select" id="generateReport" name="generateReport" required>
+                        <option value="" disabled selected>Select...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </form>
+        </div>
+
+        <!-- Prediction Results -->
+        {% if prediction %}
+        <div class="result-card">
+            <h4>Prediction Results</h4>
+            <p><strong>Selected Candlestick Pattern:</strong> {{ pattern }}</p>
+            <p><strong>Forecasted Prices:</strong> {{ prediction['forecast'] }}</p>
+            <p><strong>Actual Prices:</strong> {{ prediction['actual_prices'] }}</p>
+            <p><strong>RMSE:</strong> {{ prediction['rmse'] }}</p>
+    
+            <h4>AI-Generated Stock Report</h4>
+            <p>{{ report }}</p>
+        </div>
+        {% endif %}
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

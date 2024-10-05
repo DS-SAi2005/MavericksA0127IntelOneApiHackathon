@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results for {{ ticker }}</title>
+</head>
+<body>
+    <h1>Prediction Results for {{ ticker }}</h1>
+
+    <p><strong>Forecasted Prices:</strong> {{ result.forecast }}</p>
+    <p><strong>Actual Prices:</strong> {{ result.actual_prices }}</p>
+    <p><strong>RMSE:</strong> {{ result.rmse }}</p>
+    <p><strong>Accuracy:</strong> {{ result.accuracy }}%</p>
+
+    <h2>Candlestick Patterns:</h2>
+    <ul>
+        {% for pattern in result.patterns %}
+            <li>{{ pattern }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/go-back">Go Back</a>
+</body>
+</html>
