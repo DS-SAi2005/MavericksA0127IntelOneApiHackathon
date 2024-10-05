@@ -21,7 +21,7 @@ The user can request for a comprehensive report of the stock.
 
 # Implementation:
 
-We have used Intel's Scikit-Learn wrapper scikit-learn-intelex for importing yfinance which is used for getting real time stock data.
+We have used Intel's Scikit-Learn wrapper # scikit-learn-intelex for importing yfinance which is used for getting real time stock data.
 
 #![Screenshot 2024-10-05 082044](https://github.com/user-attachments/assets/67a4f9e7-90ee-4317-8067-1f6fa3cdd159)
 
@@ -33,11 +33,18 @@ import #cLlama # 3.1-70B versatile using langchain for generation of report
 
 ![Screenshot 2024-10-05 100032](https://github.com/user-attachments/assets/1a342bf9-04a0-454e-a13b-366c1a7c9765)
 
+
 # Live Demo:
+
 
 ![Screenshot 2024-10-05 102333](https://github.com/user-attachments/assets/bb9b00c4-ea8f-437e-bfe4-3028ff706f39)
 
 ![Screenshot 2024-10-05 102501](https://github.com/user-attachments/assets/d23e96a3-a677-45b6-a21a-1f4e7a8288cd)
+
+![Screenshot 2024-10-05 103529](https://github.com/user-attachments/assets/6b82a434-6c4d-4148-9034-20bd83a6a37c)
+
+![Screenshot 2024-10-05 103633](https://github.com/user-attachments/assets/7edb11ec-67ca-4bf8-be1c-a9943c53be85)
+
 
 
 # Future Plans:
@@ -47,10 +54,12 @@ import #cLlama # 3.1-70B versatile using langchain for generation of report
 3) Features related to lower support and resistance lines.
 4) Add more candle stick pattens and also Introduce Multiple candle stick patterns.
 
-# Challenges Faced
+# Challenges Faced:
+
 Major News (good, bad) can impact the market heavily, making it difficult to predict values in such situations.
 
 # References:
+
 https://indjst.org/articles/predicting-a-small-cap-company-stock-price-using-python-with-best-accuracy-rate-how-the-data-science-working-for-predictions-and-accuracy-rate
 
 
