@@ -3,11 +3,10 @@
 # UPCOMING CANDLE STICK PREDICTOR FOR STOCKS
 
 In intraday trading, traders heavily rely on technical analysis for making trade decisions. Candlestick graphs are an elegant way which help traders quickly understand the past movement of
-a stock’s price. They also help in understanding the market sentiment
+a stock’s price. They also help in understanding the market sentiment & Predicting the next candle stick in advance can help one manage risk and make wise decisions.
 
 ![Screenshot 2024-10-05 081903](https://github.com/user-attachments/assets/9a13e7fa-35c7-48da-b0d2-c7a086715584)
 
-Predicting the next candle stick in advance can help one manage risk and make wise decisions.
 
 # About the project:
 
