@@ -22,7 +22,7 @@ The user can request for a comprehensive report of the stock.
 
 We have used Intel's Scikit-Learn wrapper # scikit-learn-intelex for importing yfinance which is used for getting real time stock data.
 
-#![Screenshot 2024-10-05 082044](https://github.com/user-attachments/assets/67a4f9e7-90ee-4317-8067-1f6fa3cdd159)
+![Screenshot 2024-10-05 082044](https://github.com/user-attachments/assets/67a4f9e7-90ee-4317-8067-1f6fa3cdd159)
 
 We have used # TensorFlow to import # ARIMA for stock prediction.
 
